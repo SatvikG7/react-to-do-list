@@ -1,7 +1,6 @@
 import Todo from "./Todo";
 import List from "@material-ui/core/List";
 import { makeStyles } from "@material-ui/core/styles";
-import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles(() => ({
   ul: {

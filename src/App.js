@@ -58,12 +58,15 @@ function App() {
   // @Delete Todo
   function deleteTodo(todo) {
     var tds = JSON.parse(localStorage.getItem("list"));
+
     tds = tds.filter(function (td) {
       if (td.id === todo.id) {
+
         return false;
       } else if (td.id !== todo.id) {
         return true;
       }
+      return false;
     });
     localStorage.setItem("list", JSON.stringify(tds));
     setTodos(JSON.parse(localStorage.getItem("list")));
