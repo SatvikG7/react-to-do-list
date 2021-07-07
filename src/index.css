@@ -1,13 +1,97 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #707070;
+  border-radius: 16px;
+  box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+    inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+}
+::-webkit-scrollbar-track {
+  background: #0080ff;
+}
+body {
+  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+}
+.god-container {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 100%;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ff0000;
+  border: 6px dotted #000000;
+}
+.header p {
+  font-family: "Cascadia code";
+  color: #f0e68c;
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-align: center;
+  margin: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.btn {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  background: #303f9f;
+  color: #f0e68c;
+  letter-spacing: 0.1rem;
+  display: inline-block;
+  font-weight: 700;
+  transition: all 0.3s linear;
+  border: 2px solid #222;
+  width: 50%;
+  height: 3rem;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  padding: 0.75rem 1.25rem;
+}
+
+.btn:hover {
+  color: #fff;
+  background: #283797;
+}
+.btn:focus {
+  outline: #000 solid 2px;
+}
+
+.footer {
+  background: #ff0000;
+  text-align: center;
+}
+.about {
+  padding: 15px;
+  height: calc(100vh - 59px);
+  background: #0080ff;
+}
+.aboutUl {
+  margin: 0 0 0 20px;
+}
+@media (min-width: 600px) {
+  .container {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
