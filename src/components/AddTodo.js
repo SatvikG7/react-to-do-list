@@ -43,7 +43,7 @@ function AddTodo({ onAdd }) {
   const onSubmit = (e) => {
     e.preventDefault();
     if (!text) {
-      alert("Please add a Todo");
+      alert("Todo cannot be empty");
       return;
     }
     var id = nanoid();

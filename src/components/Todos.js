@@ -6,7 +6,7 @@ const useStyles = makeStyles(() => ({
   ul: {
     padding: "6px 6px 6px 6px",
     backgroundColor: "#0080ff",
-    minHeight: "calc(100vh - 85px)",
+    minHeight: "calc(100vh - 58px)",
   },
 }));
 function Todos({ todos, onDelete, onToggle }) {

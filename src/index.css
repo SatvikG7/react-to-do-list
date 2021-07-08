@@ -15,23 +15,20 @@
 ::-webkit-scrollbar-track {
   background: #0080ff;
 }
+
 body {
-  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
 }
-.god-container {
-  width: 100%;
-  height: 100%;
-}
+
 .container {
   width: 100%;
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
 }
+
 .header {
   display: flex;
   align-items: center;
@@ -39,17 +36,18 @@ body {
   background-color: #ff0000;
   border: 6px dotted #000000;
 }
+
 .header p {
   font-family: "Cascadia code";
   color: #f0e68c;
   font-size: 2.5rem;
   font-weight: 300;
   text-align: center;
-  margin: 0;
+  margin: 0 0 0 10px;
 }
 
 .btn {
-  font-family: "Roboto", sans-serif;
+  font-family: sans-serif;
   text-transform: uppercase;
   background: #303f9f;
   color: #f0e68c;
@@ -72,6 +70,7 @@ body {
   color: #fff;
   background: #283797;
 }
+
 .btn:focus {
   outline: #000 solid 2px;
 }
@@ -79,19 +78,29 @@ body {
 .footer {
   background: #ff0000;
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
+
 .about {
   padding: 15px;
   height: calc(100vh - 59px);
   background: #0080ff;
 }
+
 .aboutUl {
   margin: 0 0 0 20px;
 }
+
 @media (min-width: 600px) {
   .container {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+  }
+  
+  .footer {
+    width: 600px;
   }
 }

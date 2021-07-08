@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
-function Footer() {
+function Footer({ showAbout, toggleAbout }) {
   return (
-    <div>
-      <footer className="footer">
+    <footer className="footer">
+      {showAbout ? (
         <Link
           style={{
             textDecoration: "none",
@@ -12,12 +12,27 @@ function Footer() {
             fontSize: "20px",
             width: "100%",
           }}
+          onClick={() => toggleAbout(!showAbout)}
           to="/about"
         >
           ••••••• About •••••••
         </Link>
-      </footer>
-    </div>
+      ) : (
+        <Link
+          style={{
+            textDecoration: "none",
+            color: "aliceblue",
+            fontWeight: "bold",
+            fontSize: "20px",
+            width: "100%",
+          }}
+          onClick={() => toggleAbout(!showAbout)}
+          to="/"
+        >
+          ••••••• Go Back •••••••
+        </Link>
+      )}
+    </footer>
   );
 }
 

@@ -1,11 +1,15 @@
-import Header from "./components/Header";
-import Todos from "./components/Todos";
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import Header from "./components/Header";
 import AddTodo from "./components/AddTodo";
+import Todos from "./components/Todos";
 import Footer from "./components/Footer";
 import About from "./components/About";
-const version = "1.1.0";
+
+// *** Version ***
+const version = "1.1.1";
+
+
 function App() {
   let initialTodos;
   if (!localStorage.getItem("list")) {
@@ -38,8 +42,15 @@ function App() {
   }
 
   const [todos, setTodos] = useState(initialTodos);
-
   const [showAddTodoForm, toggleAddTodoForm] = useState(false);
+  let initFooterStateIsAbout;
+
+  if (window.location.pathname === "/") {
+    initFooterStateIsAbout = true;
+  } else {
+    initFooterStateIsAbout = false;
+  }
+  const [showAbout, toggleAbout] = useState(initFooterStateIsAbout);
 
   // @Similar to onload()
   useEffect(() => {
@@ -56,12 +67,11 @@ function App() {
   };
 
   // @Delete Todo
-  function deleteTodo(todo) {
+  const deleteTodo = (todo) => {
     var tds = JSON.parse(localStorage.getItem("list"));
 
     tds = tds.filter(function (td) {
       if (td.id === todo.id) {
-
         return false;
       } else if (td.id !== todo.id) {
         return true;
@@ -70,7 +80,8 @@ function App() {
     });
     localStorage.setItem("list", JSON.stringify(tds));
     setTodos(JSON.parse(localStorage.getItem("list")));
-  }
+  };
+
   //@Toggle importance
   const onToggle = (id) => {
     var tds = JSON.parse(localStorage.getItem("list"));
@@ -84,9 +95,9 @@ function App() {
   };
 
   // @Toggle AddTodoForm
-  function toggleForm() {
+  const toggleForm = () => {
     toggleAddTodoForm(!showAddTodoForm);
-  }
+  };
 
   return (
     <Router>
@@ -96,7 +107,6 @@ function App() {
           toggleForm={toggleForm}
           formState={showAddTodoForm}
         />
-
         <Route
           path="/"
           exact
@@ -110,12 +120,11 @@ function App() {
                   onToggle={onToggle}
                 />
               )}
-              <Footer />
             </div>
           )}
         />
-
         <Route path="/about" render={() => <About version={version} />} />
+        <Footer showAbout={showAbout} toggleAbout={toggleAbout} />
       </div>
     </Router>
   );
