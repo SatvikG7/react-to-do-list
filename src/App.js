@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 
 // *** Version ***
-const version = "1.1.2";
+const version = "1.1.3";
 
 
 function App() {
