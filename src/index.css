@@ -38,7 +38,8 @@ body {
 }
 
 .header p {
-  font-family: "Cascadia code";
+  font-family: "Cascadia code", "Consolas", "Fira code", "Fira Sans", "fangsong",
+    "Code", "Roboto", "Helvetica";
   color: #f0e68c;
   font-size: 2.5rem;
   font-weight: 300;
@@ -47,7 +48,9 @@ body {
 }
 
 .btn {
-  font-family: sans-serif;
+  font-family: "Cascadia code", "Consolas", "Fira code", "Fira Sans", "fangsong",
+    "Code", "Roboto", "Helvetica";
+
   text-transform: uppercase;
   background: #303f9f;
   color: #f0e68c;
@@ -99,7 +102,7 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   .footer {
     width: 600px;
   }
