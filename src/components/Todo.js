@@ -25,7 +25,7 @@ const useStyles = makeStyles(() => ({
     margin: "0",
   },
   td: {
-    borderRadius: "8px",
+    borderRadius: "10px",
     backgroundColor: "cyan",
     marginBottom: "7px",
   },

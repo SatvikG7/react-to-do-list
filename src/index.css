@@ -50,7 +50,6 @@ body {
 .btn {
   font-family: "Cascadia code", "Consolas", "Fira code", "Fira Sans", "fangsong",
     "Code", "Roboto", "Helvetica";
-
   text-transform: uppercase;
   background: #303f9f;
   color: #f0e68c;
@@ -94,6 +93,7 @@ body {
 
 .aboutUl {
   margin: 0 0 0 20px;
+  font-size: 1.25rem;
 }
 
 @media (min-width: 600px) {
