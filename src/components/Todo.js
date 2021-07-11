@@ -7,14 +7,7 @@ import IconButton from "@material-ui/core/IconButton";
 import DeleteForeverTwoToneIcon from "@material-ui/icons/DeleteForeverTwoTone";
 import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles(() => ({
-  text: {
-    fontSize: "1.25rem",
-    fontWeight: "500",
-  },
-  day: {
-    fontSize: "1rem",
-    color: "#525252",
-  },
+  
   cursor: {
     cursor: "pointer",
   },
@@ -22,7 +15,19 @@ const useStyles = makeStyles(() => ({
     boxShadow: "0 0 0 2px green, 0 0 0 3.5px cyan",
   },
   todo: {
+    display: "flex",
+    flexDirection:"column",
     margin: "0",
+  },
+  text: {
+    display: "inline",
+    fontSize: "1.25rem",
+    fontWeight: "500",
+  },
+  day: {
+    display: "inline",
+    fontSize: "1rem",
+    color: "#525252",
   },
   td: {
     borderRadius: "10px",
