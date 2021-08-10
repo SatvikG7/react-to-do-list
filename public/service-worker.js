@@ -4,8 +4,7 @@ const CACHE_THIS = [
   "/",
   "/index.html",
   "/manifest.json",
-  "/logo192.png",
-  "/logo512.png"
+  "/icon-192x192.png"
 ];
 
 self.addEventListener("install", (event) => {

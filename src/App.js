@@ -103,7 +103,7 @@ function App() {
     <Router>
       <div className="container">
         <Header
-          title="ToDoList"
+          title="Toact"
           toggleForm={toggleForm}
           formState={showAddTodoForm}
         />
